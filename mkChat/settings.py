@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('MkChat_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get['DEBUG']
+DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['mkchatt.herokuapp.com/','127.0.0.1']
 
