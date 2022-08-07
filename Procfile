@@ -1,1 +1,1 @@
-web : gunicorn mkChat.wsgi
+web: gunicorn mkChat.wsgi
