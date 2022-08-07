@@ -1,1 +1,1 @@
-web : gunicorn mkChat.wsgi --log-file -
+web : gunicorn mkChat.wsgi 
