@@ -21,11 +21,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = 'django-insecure-w)$%e9q)uy8wshmosl5)_c_xffdoiu=vk(npyt-@2k(hjt^%(7'
 SECRET_KEY = os.environ.get('MkChat_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
+#DEBUG = True
 
 ALLOWED_HOSTS = ['mkchatt.herokuapp.com/','127.0.0.1']
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'base',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        'USER': 'moink',                      # Not used with sqlite3.
+        'PASSWORD': '1234',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '', 
     }
 }
 
@@ -123,7 +128,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR ,'static' ),
+    BASE_DIR/'static' 
 ]
 
 # Default primary key field type
@@ -133,4 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID=1
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())

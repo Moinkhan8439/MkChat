@@ -23,6 +23,21 @@
     </section>
     
 </main>
+  
+<script type="text/javascript" >
+    window.appConfig = {
+        APP_ID : '{{ request.session.APP_ID }}',
+        NAME : '{{ request.session.username }}',
+        CHANNEL : '{{ request.session.room }}',
+        UID : '{{ request.session.UID }}',
+        TOKEN : '{{ request.session.token }}',
+        csrf_token: '{{ csrf_token }}'
+    }
+</script>
+
+{% block script %}
+    {{ block.super }}
+{% endblock script %} 
 <script type="text/javascript" src="{% static 'assets/AgoraRTC_N-4.13.0.js' %}" ></script>
 <script type="text/javascript" src="{% static 'js/streams.js' %}" ></script>
 

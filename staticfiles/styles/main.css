@@ -10,6 +10,7 @@ body{
     display: block;
     width: 100px;
     margin: auto;
+    padding-left: 30px;
 }
 
 #form-container{
@@ -59,6 +60,34 @@ body{
     border: none;
     color:#fff;
 }
+
+/*-----------------------------Lobby Styling -------------------*/
+
+#landing-buttons-wrapper{
+    margin:20px;
+    justify-content: center;
+    display: flex;
+}
+
+#landing-buttons-wrapper a{
+    text-align: center;
+    text-decoration: none;
+    width:100%;
+    border: 2px solid rgba(198,202,219,1);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(75,93,172,1);
+    border: none;
+    color:#fff;
+    margin : 2px
+} 
+
+
+
+
+
+
 /* ----------------------------Room Styling -------------------------*/
 
 #room-name-wrapper{
@@ -136,4 +165,83 @@ body{
 
 #leave-btn{
     background-color: rgb(255,80,80,1);
+}
+
+@media screen and (max-width:1650px) {
+    .video-container{
+        flex-basis: 300px;
+        min-height: 200px;
+    }
+}
+
+/*----------------------------------Navbar-----------------------*/
+
+
+
+#navbar {
+    background-color: #fff;
+    overflow: inherit;
+    position: unset; 
+    font-size: 16px;
+    text-align: center;
+    color: black;
+}
+
+#nav-left{
+    float: left;    
+}
+
+#nav-right {
+  float: right;
+  text-align: center;
+  }
+
+  #navbar a{
+    display: inline-flex;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    padding: 7px 7px;
+    }
+
+  #navbar a:hover {
+    background-color:rgba(75,93,172,1);
+    color: #fff;
+  }
+  
+  /* Add a color to the active/current link */
+  #navbar a{
+    text-decoration: none;
+    color:rgba(75,93,172,1);
+  }
+
+
+/*-----------------------------Message Styling-------------------------------------------------------------*/
+
+.message-field{
+    width:100%;
+    border: 2px solid rgba(198,202,219,1);
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    color:#fff;
+    text-align: center;
+}
+
+
+
+
+/*----------------------------Media tag--------------------------------------------------*/
+@media screen and (max-height:450px) {
+    #form-container{
+        width: 99%;
+        padding:5px;
+
+    }
+
+    #welcome-message h1{
+        font-size: 24px;
+    }
+    
 }
