@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('MkChat_SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 #DEBUG = True
 
-ALLOWED_HOSTS = ['mkchatt.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['mkchatt.herokuapp.com','127.0.0.1']
 
 
 # Application definition
