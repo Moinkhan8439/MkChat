@@ -1,5 +1,3 @@
-from logging import PlaceHolder, exception
-from tkinter.ttk import Style
 from django import forms
 from .models import Room,RoomMember
 from django.core.exceptions import ObjectDoesNotExist
