@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('MkChat_SECRET_KEY')
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 #DEBUG = True
@@ -138,4 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SITE_ID=1
 
-#django_heroku.settings(locals())
+APP_ID='50b57bc7553f46b5a1320571ff21c002'
+APP_CERTIFICATE ='46d85ca89c4b4184967139f4dd80c6fa'
+
+django_heroku.settings(locals())

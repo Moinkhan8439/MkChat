@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.conf import settings
 
 from utilities.RtcTokenBuilder import RtcTokenBuilder
 
@@ -19,9 +20,9 @@ import os
 
 ROLE_HOST=1
 ROLE_ATTENDEE=2
-appId=os.environ.get('Agora_app_id')
-#appCertificate='46d85ca89c4b4184967139f4dd80c6fa'
-appCertificate=os.environ.get('Agora_app_certificate')
+appId=settings.APP_ID
+appCertificate=settings.APP_CERTIFICATE
+
 # Create your views here.
 
 def getToken(request):  

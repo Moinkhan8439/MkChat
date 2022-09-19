@@ -2,6 +2,8 @@
 import os,time,random
 from .models import RoomMember
 from utilities.RtcTokenBuilder import RtcTokenBuilder
+from django.conf import settings
+
 
 def generateUID(room):
     uid=random.randint(1,230)
@@ -12,8 +14,8 @@ def generateUID(room):
 
 
 def generateRTCToken(room,uid,role):
-    appId=os.environ.get('Agora_app_id')
-    appCertificate= os.environ.get('Agora_app_certificate')
+    appId=settings.APP_ID
+    appCertificate= settings.APP_CERTIFICATE
     channelName=room
     uid=uid
     role=role
